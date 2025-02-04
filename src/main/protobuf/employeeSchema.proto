@@ -9,5 +9,34 @@ message Employee {
 }
 
 message Phone {
-    string number = 3;
+    string number = 1;
+}
+
+message EmploreeNameWithOtherMsgType {
+    string name = 1;
+    int32 age = 2;
+    Phone number = 3;
+}
+
+message EmployeeMapDict {
+    map<string, string> metadata = 1;
+}
+
+message SkillsList {
+    repeated string skills = 1;
+}
+
+
+message NestedEmployeeType {
+    string name = 1;
+    int32 age = 2;
+
+    message Address {
+        string city = 1;
+        string state = 2;
+        string country = 3;
+    }
+    Address address = 3;
+    SkillsList skills = 4;
+    EmployeeMapDict additional = 5;
 }
