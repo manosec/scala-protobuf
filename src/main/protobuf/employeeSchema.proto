@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package protobuf;
+
+message Employee {
+    string name = 1;
+    int32 age = 2;
+    string number = 3;
+}
+
+message Phone {
+    string number = 3;
+}
